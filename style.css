@@ -1,0 +1,128 @@
+:root{
+  --pink:#ffc0d2;
+  --deep-pink:#ff6fa3;
+  --accent:#d81b60;
+  --card:#fff;
+  --muted:#6b6b6b;
+  --max:1140px;
+}
+
+/* base */
+*{box-sizing:border-box}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fff6fb 0%, #ffeef8 100%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  margin:0;
+}
+
+/* wrapper cards look */
+.card-box{
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  box-shadow: 0 10px 30px rgba(200,50,100,0.06);
+}
+
+/* navbar brand */
+.logo{ height:56px; width:auto; border-radius:10px; }
+
+/* hero */
+.hero-section{ padding:48px 0; }
+.brand-title{ font-weight:800; color:#3a1630; }
+.brand-sub{ font-size:12px; color:#7a2a4b; }
+
+/* pink buttons */
+.btn-pink{ background:var(--deep-pink); color:#fff; border:0; padding:.6rem 1rem; border-radius:10px; }
+.btn-pink:hover{ background:#ff4f86; }
+
+/* puppy card */
+.puppy-card{ background:#fff; border-radius:14px; transition:transform .28s ease; }
+.puppy-card:hover{ transform: translateY(-6px); }
+
+/* card-media with overlay */
+.card-media{ position:relative; height:260px; overflow:hidden; }
+.card-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.card-overlay{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.45));
+  opacity:0; transition:opacity .22s ease, transform .22s ease; transform: translateY(8px);
+}
+.puppy-card:hover .card-overlay{ opacity:1; transform: translateY(0); }
+.overlay-text{ text-align:center; color:#fff; }
+.overlay-price{ font-size:1.2rem; font-weight:800; color:var(--accent); background:rgba(255,255,255,0.92); color:var(--accent); padding:.25rem .6rem; border-radius:8px; display:inline-block; }
+.overlay-age{ margin-top:.45rem; font-weight:600; font-size:.95rem; }
+
+/* text pink */
+.text-pink{ color:var(--accent); }
+
+/* testimonials */
+.testi{ background: linear-gradient(180deg,#fff8fb,#fff2f7); border-left:4px solid var(--deep-pink); }
+
+/* breeder photo */
+.breeder-photo-lg{ width:200px; height:200px; object-fit:cover; }
+
+/* floating whatsapp */
+.floating-whatsapp{
+  position:fixed; right:18px; bottom:18px; width:56px; height:56px; background:#25D366;
+  color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18); z-index:999;
+}
+
+/* small screens */
+@media (max-width: 992px){
+  .card-box{ padding:20px; }
+  .card-media{ height:220px; }
+}
+@media (max-width: 576px){
+  .card-media{ height:180px; }
+  .brand-title{ display:none; }
+  .brand-sub{ display:none; }
+}
+
+/* accessibility focus */
+a:focus, button:focus, input:focus, textarea:focus { outline:3px solid rgba(255,111,163,0.15); outline-offset:2px; }
+.breeder-photo {
+  width: 160px;   /* change this number to make it smaller/bigger */
+  height: 160px;  /* keeps it a perfect circle */
+  object-fit: cover;
+  border: 4px solid #ffb6c1; /* optional cute pink border */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* soft shadow */
+}
+.logo-img {
+  height: 50px;   /* adjust size */
+  width: auto;    /* keeps proportions */
+}
+/* Stylish Footer */
+.footer {
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4); /* pink gradient */
+  color: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+}
+
+.footer h5 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffe4ec; /* soft hover effect */
+  text-decoration: underline;
+}
